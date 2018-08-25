@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Digital-7';
+    src: url(fonts/digital-7.ttf);
+}
+
 body {
     margin:0;
     padding:0;
@@ -18,9 +23,9 @@ p {
     margin:0;
 }
 table {
-    max-width:350px;
+    width:400px;
     margin:30px auto;
-    
+    table-layout:fixed;   
    }
 table, th, td {
     background-color:#000000;
@@ -83,8 +88,10 @@ a.b {color:#000000;}
 .other {background-color:#ffffff;
 } 
 .res {background-color:#ffffff;
-    color:#333333;
+    color:#000000;
     height:45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .gray {background-color:#012e01;
     color:#02ac49;
