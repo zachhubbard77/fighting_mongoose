@@ -24,7 +24,7 @@ table {
    }
 table, th, td {
     background-color:#000000;
-    border: 1px solid #2e8901;
+    border: 1px solid #008e3c;
     border-collapse: collapse;
     font-family: 'Digital-7', Arial, sans-serif;
     font-weight:300;
@@ -84,11 +84,12 @@ a.b {color:#000000;}
 } 
 .res {background-color:#ffffff;
     color:#333333;
+    height:45px;
 }
 .gray {background-color:#012e01;
     color:#02ac49;
 }
-.eq {background-color:#0066cc;
+.eq {background-color:#71B48D;
     color:#ffffff;
     font-family:Arial, sans-serif;
 }

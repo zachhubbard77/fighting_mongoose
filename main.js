@@ -20,6 +20,7 @@ let equalsKey = document.getElementById("equalsKey");//end variables for event l
 
 let calculatingString = "";
 let displayValue = 0;
+let result = 0;
 
 //states
 let starting = true;  // set back to true when we hit clear
@@ -79,10 +80,11 @@ add.addEventListener("click",function(){
 })
 decimal.addEventListener("click",function(){
     addToString('.');
-    
+    updateDisplay('.');
 })
 subtract.addEventListener("click",function(){
     addToString('-');
+    updateDisplay('-');
     clearDisplay();
 })
 multiply.addEventListener("click",function(){
@@ -95,9 +97,13 @@ divide.addEventListener("click",function(){
 })
 clearKey.addEventListener("click",function(){
     clear();
+    clearDisplay();
+    console.log('test');
 })
 equalsKey.addEventListener("click",function(){
     calculate();
+    displayValue = calculate();
+    display.innerHTML = displayValue;
     
 })//end event listeners for keys
 
@@ -110,8 +116,10 @@ function addToString(num){
 }
 
 function calculate(){
+    
     console.log( eval(calculatingString) );
-
+    result = eval(calculatingString);
+    return result;
 }
 
 function updateDisplay(num){
