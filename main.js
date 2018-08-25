@@ -22,6 +22,11 @@ let calculatingString = "";
 let displayValue = 0;
 let result = 0;
 
+// ------------------
+let negativeNum = true;
+
+//-------------------
+
 //states
 let starting = true;  // set back to true when we hit clear
 
@@ -84,8 +89,22 @@ decimal.addEventListener("click",function(){
 })
 subtract.addEventListener("click",function(){
     addToString('-');
-    updateDisplay('-');
-    clearDisplay();
+    if(negativeNum){
+        updateDisplay('-');
+        negativeNum = false;
+        
+   } else {
+       clearDisplay();
+   }
+
+
+
+
+    // addToString('-');
+    // updateDisplay('-');
+    // clearDisplay();
+
+
 })
 multiply.addEventListener("click",function(){
     addToString('*');
@@ -105,6 +124,10 @@ equalsKey.addEventListener("click",function(){
     displayValue = calculate();
     display.innerHTML = displayValue;
     
+    //---------------------
+    negativeNum = true;
+    //--------------------
+
 })//end event listeners for keys
 
 
@@ -140,3 +163,15 @@ function clearDisplay(){
     displayValue = "";
     display.innerHTML = displayValue;
 }
+
+//Ignore below
+//******************************************************* *
+
+document.addEventListener('keydown', function(event){
+    if(event.keycode == '49'){
+        console.log('This is number 1');
+    }
+
+});
+
+
