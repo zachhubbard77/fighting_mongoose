@@ -1,3 +1,4 @@
+let display = document.getElementById('display');
 let num0 = document.getElementById("num0");// begin variables for event listeners/handlers
 let num1 = document.getElementById("num1");
 let num2 = document.getElementById("num2");
@@ -16,71 +17,118 @@ let divide = document.getElementById("divide");
 let clearKey = document.getElementById("clearKey");
 let equalsKey = document.getElementById("equalsKey");//end variables for event listeners
 
+
+let calculatingString = "";
+let displayValue = 0;
+
+//states
+let starting = true;  // set back to true when we hit clear
+
+
+
 num0.addEventListener("click",function(){//begin event listeners for keys
+    addToString('0');
+    updateDisplay('0');
+});
 
-    console.log("num0");
-})
 num1.addEventListener("click",function(){
+    addToString('1');
+    updateDisplay('1');
+});
 
-    console.log("num1");
-})
 num2.addEventListener("click",function(){
+    addToString('2');
+    updateDisplay('2');
+});
 
-    console.log("num2");
-})
 num3.addEventListener("click",function(){
-
-    console.log("num3");
+    addToString('3');
+    updateDisplay('3');
 })
-num4.addEventListener("click",function(){
 
-    console.log("num4");
+num4.addEventListener("click",function(){
+    addToString('4');
+    updateDisplay('4');
 })
 num5.addEventListener("click",function(){
-
-    console.log("num5");
+    addToString('5');
+    updateDisplay('5');
 })
-num6.addEventListener("click",function(){
 
-    console.log("num6");
+num6.addEventListener("click",function(){
+    addToString('6');
+    updateDisplay('6');
 })
 num7.addEventListener("click",function(){
-
-    console.log("num7")
+    addToString('7');
+    updateDisplay('7');
 })
+
 num8.addEventListener("click",function(){
-
-    console.log("num8");
+    addToString('8');
+    updateDisplay('8');
 })
-num9.addEventListener("click",function(){
 
-    console.log("num9");
+num9.addEventListener("click",function(){
+    addToString('9');
+    updateDisplay('9');
 })
 add.addEventListener("click",function(){
-
-    console.log("add");
+    addToString('+');
+    clearDisplay();
 })
 decimal.addEventListener("click",function(){
-
-    console.log("decimal");
+    addToString('.');
+    
 })
 subtract.addEventListener("click",function(){
-
-    console.log("subtract");
+    addToString('-');
+    clearDisplay();
 })
 multiply.addEventListener("click",function(){
-
-    console.log("multiply");
+    addToString('*');
+    clearDisplay();
 })
 divide.addEventListener("click",function(){
-
-    console.log("divide");
+    addToString('/');
+    clearDisplay();
 })
 clearKey.addEventListener("click",function(){
-
-    console.log("clear");
+    clear();
 })
 equalsKey.addEventListener("click",function(){
-
-    console.log("equals");
+    calculate();
+    
 })//end event listeners for keys
+
+
+
+function addToString(num){
+    calculatingString += num;
+    console.log(calculatingString);
+    return calculatingString;
+}
+
+function calculate(){
+    console.log( eval(calculatingString) );
+
+}
+
+function updateDisplay(num){
+    if(starting){
+        displayValue = "";
+        starting = false;
+    }
+    displayValue += num;
+    display.innerHTML = displayValue;
+    console.log(displayValue);
+}
+
+function clear(){
+    calculatingString = "";
+}
+
+function clearDisplay(){
+    displayValue = "";
+    display.innerHTML = displayValue;
+}
