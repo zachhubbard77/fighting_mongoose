@@ -9,11 +9,13 @@ let num7 = document.getElementById("num7");
 let num8 = document.getElementById("num8");
 let num9 = document.getElementById("num9");
 let add = document.getElementById("add");
+let decimal = document.getElementById("decimal");
 let subtract = document.getElementById("subtract");
 let multiply = document.getElementById("multiply");
 let divide = document.getElementById("divide");
-let clear = document.getElementById("clear");
-let equals = document.getElementById("equals");//end variables for event listeners
+let clearKey = document.getElementById("clearKey");
+let equalsKey = document.getElementById("equalsKey");//end variables for event listeners
+
 num0.addEventListener("click",function(){//begin event listeners for keys
 
     console.log("num0");
@@ -58,6 +60,10 @@ add.addEventListener("click",function(){
 
     console.log("add");
 })
+decimal.addEventListener("click",function(){
+
+    console.log("decimal");
+})
 subtract.addEventListener("click",function(){
 
     console.log("subtract");
@@ -70,11 +76,11 @@ divide.addEventListener("click",function(){
 
     console.log("divide");
 })
-clear.addEventListener("click",function(){
+clearKey.addEventListener("click",function(){
 
     console.log("clear");
 })
-equals.addEventListener("click",function(){
+equalsKey.addEventListener("click",function(){
 
     console.log("equals");
 })//end event listeners for keys

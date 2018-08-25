@@ -30,7 +30,7 @@ table, th, td {
     font-weight:300;
     font-size: 2rem;
    }   
-td { padding:0px;
+td { padding:20px;
         width:25%;
         text-align:center;
     }
@@ -41,3 +41,54 @@ a {
 a.g {color:#33cc00;}
 a.w {color:#ffffff;}
 a.b {color:#000000;}
+
+/* Pop */
+/*Credit: Ian Lunn http://ianlunn.github.io/Hover/*/
+@-webkit-keyframes hvr-pop {
+    60% {
+      -webkit-transform: scale(1.9);
+      transform: scale(1.9);
+    }
+  }
+  @keyframes hvr-pop {
+    60% {
+      -webkit-transform: scale(1.9);
+      transform: scale(1.9);
+    }
+  }
+  .hvr-pop {
+    display: block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+    -webkit-animation-name: hvr-pop;
+    animation-name: hvr-pop;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+/* END Pop */     
+
+
+.funct {background-color:#02ac49;
+    color:#012e01;
+    font-family:Arial, sans-serif;
+} 
+.other {background-color:#ffffff;
+} 
+.res {background-color:#ffffff;
+    color:#333333;
+}
+.gray {background-color:#012e01;
+    color:#02ac49;
+}
+.eq {background-color:#0066cc;
+    color:#ffffff;
+    font-family:Arial, sans-serif;
+}
